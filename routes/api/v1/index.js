@@ -5,7 +5,9 @@ const orderController = require("../../../src/controllers/orderController");
 const userController = require("../../../src/controllers/userController");
 
 var router = express.Router();
-
+router.get("/", (req, res) => {
+  res.send("Hello World");
+});
 router.post("/category/all", categoryController.listCategories);
 router.post("/product/all", productController.listProducts);
 router.post("/product/add", productController.addProducts);
